@@ -1,4 +1,4 @@
-# SML Assignment 3 — Roll No. 2023090
+# SML Assignment 3
 
 ## Overview
 
@@ -22,11 +22,15 @@ PCA is fitted on the full training subset of the three classes and then used to 
 
 ### Target vectors
 For each class $k \in \{0, 1, 2\}$:
-$$y_k = 
+
+$$
+y_k = 
 \begin{cases} 
 1 & \text{if the sample belongs to class } k \\ 
 0 & \text{otherwise} 
-\end{cases}$$
+\end{cases}
+$$
+
 
 ### Ridge Regression
 The ridge model is fit in one-vs-rest form using the PCA features. The ridge objective is:
@@ -39,8 +43,8 @@ The intercept $b$ is not regularized.
 Lasso is fit in one-vs-rest form using `sklearn.linear_model.Lasso`, which is the only scikit-learn component used in the assignment.
 
 ### Reported plots
-- Training and test MSE vs. \(\lambda\) for ridge and lasso.
-- Number of non-zero lasso coefficients vs. \(\lambda\).
+- Training and test MSE vs. $\lambda$ for ridge and lasso.
+- Number of non-zero lasso coefficients vs. $\lambda$.
 - Regularization paths for ridge and lasso for class 1.
 - Ridge training and test MSE vs. PCA dimension \(p\).
 
